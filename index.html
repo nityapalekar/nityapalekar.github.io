@@ -1,22 +1,15 @@
-<!--
-Personal one-page site for Nitya Shailesh Palekar
-Built with Bootstrap 5 and Bootstrap Icons
-All CSS and JS are inline. 
-Defaults used for skipped items.
--->
-
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nitya Shailesh Palekar - ISU Student</title>
-  <meta name="description" content="Biotechnology Professional with an inclination towards Space Biosciences. MSc 2026 at International Space University.">
+  <title>Nitya Shailesh Palekar - MSc Space Studies</title>
+  <meta name="description" content="Biotechnology Professional with a strong inclination towards Space Biosciences. MSc 2026 at International Space University.">
   <meta name="author" content="Nitya Shailesh Palekar">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Nitya Shailesh Palekar - ISU Student">
-  <meta property="og:description" content="Biotechnology Professional with an inclination towards Space Biosciences. MSc 2026 at International Space University.">
+  <meta property="og:title" content="Nitya Shailesh Palekar - MSc Space Studies">
+  <meta property="og:description" content="Biotechnology Professional with a strong inclination towards Space Biosciences. MSc 2026 at International Space University.">
   <meta property="og:type" content="website">
 
   <!-- Bootstrap CSS and Icons -->
@@ -25,14 +18,16 @@ Defaults used for skipped items.
 
   <style>
     :root {
-      --isu-blue: #0b3d91;
-      --isu-gold: #f0b429;
-      --isu-ink: #0d1b2a;
-      --isu-sky: #e6f1ff;
+      --space-dark: #0b0f2d;
+      --space-mid: #1a1f4e;
+      --space-accent: #4a6fa5;
+      --space-gold: #f0b429;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     body {
       scroll-behavior: smooth;
+      background: linear-gradient(135deg, var(--space-dark), var(--space-mid));
+      color: #f1f1f1;
     }
     a.skip-link {
       position: absolute;
@@ -47,35 +42,54 @@ Defaults used for skipped items.
       top: 0;
       width: auto;
       height: auto;
-      background: var(--isu-gold);
+      background: var(--space-gold);
       color: #000;
       padding: .5rem;
       z-index: 1000;
     }
     header.hero {
-      background: var(--isu-blue);
+      background: radial-gradient(circle at 30% 30%, #1e2a6d, #0b0f2d);
       color: white;
       padding: 6rem 1rem;
       text-align: center;
+      position: relative;
     }
-    header.hero h1 {
-      font-size: 2.5rem;
+    header.hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid var(--space-gold);
+      margin-bottom: 1rem;
     }
     section {
       padding: 4rem 1rem;
     }
+    section h2 {
+      border-bottom: 2px solid var(--space-gold);
+      display: inline-block;
+      padding-bottom: .3rem;
+      margin-bottom: 1.5rem;
+    }
     .timeline {
-      border-left: 2px solid var(--isu-blue);
+      border-left: 2px solid var(--space-gold);
       padding-left: 1rem;
     }
     .timeline-entry {
       margin-bottom: 2rem;
     }
     footer {
-      background: var(--isu-ink);
+      background: #000;
       color: white;
       padding: 1rem;
       text-align: center;
+    }
+    .btn-primary {
+      background-color: var(--space-accent);
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: var(--space-gold);
+      color: #000;
     }
   </style>
 </head>
@@ -84,7 +98,7 @@ Defaults used for skipped items.
 <a href="#main" class="skip-link">Skip to content</a>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--isu-blue);">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #0b0f2d;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Nitya Palekar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -98,15 +112,15 @@ Defaults used for skipped items.
         <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <button id="themeToggle" class="btn btn-sm btn-outline-light ms-3" aria-label="Toggle theme"><i class="bi bi-brightness-high"></i></button>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
 <header class="hero">
+  <img src="https://media.licdn.com/dms/image/v2/D4D03AQH67RdRATMFEQ/profile-displayphoto-crop_800_800/B4DZmQJuzFJQAI-/0/1759060096756?e=1762387200&v=beta&t=jHunsaVugjcc9HdjheTxZdYAnipzfpJ2XzgA7MpOuEk" alt="Profile photo of Nitya Palekar">
   <h1>Nitya Shailesh Palekar</h1>
-  <p>Biotechnology Professional With An Inclination Towards Space Biosciences</p>
+  <p>Biotechnology Professional with a strong inclination towards Space Biosciences</p>
   <div class="mt-3">
     <a href="#projects" class="btn btn-light m-1">Projects</a>
     <a href="#cv" class="btn btn-light m-1">CV</a>
@@ -121,7 +135,6 @@ Defaults used for skipped items.
     <h2>About</h2>
     <p>I am a student of MSc 2026 at International Space University, from Mumbai, India.</p>
     <p><strong>Focus:</strong> Immuno-oncology, Biophysics, Genetics, Immunology</p>
-    <p><strong>Tools:</strong> Python, MATLAB, Git, Jupyter, VS Code, Linux</p>
     <p><strong>Languages:</strong> English, German (A1)</p>
     <p><strong>Interests:</strong> Space Medicine, Human and Animal Experiments in Microgravity, Space Pharmacology</p>
   </section>
@@ -131,53 +144,26 @@ Defaults used for skipped items.
     <h2>Projects</h2>
     <div class="row">
       <div class="col-md-4 mb-3">
-        <div class="card h-100">
+        <div class="card h-100 text-dark">
           <div class="card-body">
             <h5 class="card-title">Project One</h5>
             <p class="card-text">Goal and result of the first project.</p>
-            <ul>
-              <li>Tool/data used</li>
-              <li>Method applied</li>
-              <li>Outcome</li>
-            </ul>
-            <div>
-              <a href="#" class="btn btn-sm btn-primary disabled">Demo</a>
-              <a href="#" class="btn btn-sm btn-secondary disabled">Code</a>
-            </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-3">
-        <div class="card h-100">
+        <div class="card h-100 text-dark">
           <div class="card-body">
             <h5 class="card-title">Project Two</h5>
             <p class="card-text">Goal and result of the second project.</p>
-            <ul>
-              <li>Tool/data used</li>
-              <li>Method applied</li>
-              <li>Outcome</li>
-            </ul>
-            <div>
-              <a href="#" class="btn btn-sm btn-primary disabled">Demo</a>
-              <a href="#" class="btn btn-sm btn-secondary disabled">Code</a>
-            </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-3">
-        <div class="card h-100">
+        <div class="card h-100 text-dark">
           <div class="card-body">
             <h5 class="card-title">Project Three</h5>
             <p class="card-text">Goal and result of the third project.</p>
-            <ul>
-              <li>Tool/data used</li>
-              <li>Method applied</li>
-              <li>Outcome</li>
-            </ul>
-            <div>
-              <a href="#" class="btn btn-sm btn-primary disabled">Demo</a>
-              <a href="#" class="btn btn-sm btn-secondary disabled">Code</a>
-            </div>
           </div>
         </div>
       </div>
@@ -211,24 +197,12 @@ Defaults used for skipped items.
   <!-- Contact -->
   <section id="contact" class="container">
     <h2>Contact</h2>
-    <p>Email: <span id="email">nitya@example.com</span></p>
+    <p>Email: <span id="email">palekarnitya@gmail.com</span></p>
     <div>
-      <a id="mailLink" href="mailto:nitya@example.com" class="btn btn-success m-1">Email</a>
+      <a id="mailLink" href="mailto:palekarnitya@gmail.com" class="btn btn-success m-1">Email</a>
       <button id="copyEmailBtn" class="btn btn-outline-secondary m-1">Copy email</button>
     </div>
     <p><a href="https://www.linkedin.com/in/nitya-palekar-20364b198/" target="_blank">LinkedIn</a></p>
-  </section>
-
-  <!-- Edit Checklist -->
-  <section id="edit-checklist" class="container">
-    <h2>Edit Checklist</h2>
-    <ul>
-      <li>Add real project details</li>
-      <li>Update experience entries</li>
-      <li>Add profile image or set to none</li>
-      <li>Replace placeholder email if needed</li>
-      <li>Add cv.pdf to root folder</li>
-    </ul>
   </section>
 </main>
 
@@ -243,19 +217,6 @@ Defaults used for skipped items.
 <script>
   // Year
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Theme toggle with localStorage
-  const themeToggle = document.getElementById("themeToggle");
-  const storedTheme = localStorage.getItem("theme");
-  if (storedTheme) {
-    document.documentElement.setAttribute("data-bs-theme", storedTheme);
-  }
-  themeToggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-bs-theme");
-    const next = current === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-bs-theme", next);
-    localStorage.setItem("theme", next);
-  });
 
   // CV check
   fetch("cv.pdf", { method: "HEAD" })
